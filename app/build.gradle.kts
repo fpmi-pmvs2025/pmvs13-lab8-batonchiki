@@ -75,7 +75,14 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.6.0")
 
+
+
     testImplementation(libs.junit)
+    testImplementation("org.robolectric:robolectric:4.12.1")
+
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

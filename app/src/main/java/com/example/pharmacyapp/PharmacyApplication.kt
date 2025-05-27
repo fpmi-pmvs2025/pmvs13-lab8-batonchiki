@@ -6,9 +6,7 @@ import com.example.pharmacyapp.data.local.AppDatabase
 import com.example.pharmacyapp.data.remote.ApiService
 import com.example.pharmacyapp.data.repository.ProductRepository
 import com.example.pharmacyapp.data.repository.ProductRepositoryImpl
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.pharmacyapp.logger.DefaultLogger
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -42,7 +40,8 @@ class PharmacyApplication : Application() {
     val productRepository: ProductRepository by lazy {
         ProductRepositoryImpl(
             productDao = database.productDao(),
-            apiService = apiService
+            apiService = apiService,
+            logger = DefaultLogger()
         )
     }
 
