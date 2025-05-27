@@ -19,7 +19,7 @@ class ProductRepositoryImpl(
     private val productsJsonUrl = "https://gist.githubusercontent.com/RustambekTalipov/423e2d0ac9ade2f20c345eebe2862e00/raw/78fe5405a707c6531e59c2e37fe7230782f2ecce/pharmacy_products.json"
 
     override fun getAllProducts(): Flow<List<ProductEntity>> {
-        logger.debug("ProductRepositoryImpl", "Getting all products flow from DAO")
+        logger.debug("ProductRepositoryImpl1234", "Getting all products flow from DAO")
         return productDao.getAllProducts()
     }
 
